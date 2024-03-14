@@ -1,6 +1,8 @@
+import { siteConfigType } from "@/types";
 
+export const creatorName:string="Omor Hawlader | Omar "
 
-export const siteConfig = {
+export const siteConfig : siteConfigType = {
     name: "Omars Blog",
 
     description:
@@ -9,9 +11,8 @@ export const siteConfig = {
     url:"http://localhost:3000",
 
     links:{
-        github: ""
+        github:"https://github.com/omorhawlader/omars-blog-app"
     }
-
 
     
     
