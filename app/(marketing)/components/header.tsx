@@ -5,6 +5,10 @@ import { MainNavItem } from "@/types";
 import { CommandIcon, X } from "lucide-react";
 import Link from "next/link";
 import {
+  RegisterLink,
+  LoginLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
+import {
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -93,7 +97,8 @@ const Header = ({ items }: mainNavProps) => {
       )}
       {/* login Button  */}
       <Button variant={"secondary"} className="ml-auto px-5" asChild>
-        <Link href={"/login"}>login</Link>
+        {/* <Link href={"/login"}>login</Link> */}
+        <LoginLink>login</LoginLink>
       </Button>
     </header>
   );

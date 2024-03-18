@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" w-screen h-[40vh] flex flex-col justify-around ">
-      <div className="text-center">
+    <footer className=" w-screen h-[45vh] flex flex-col justify-between ">
+      <div className="mt-20 text-center">
         <h1 className="text-[4.5vw] font-bold">Proudly Open Source</h1>
         <h4 className="text-[1.2vw] text-gray-400">
           Taxonomy is open source and powered by open source software. ,<br />
@@ -18,12 +18,12 @@ const Footer = () => {
         </h4>
       </div>
 
-      <div className="px-8 text-gray-500 flex justify-between">
+      <div className="px-8 text-gray-500 flex justify-between mb-4 dark:text-gray-50">
         <p>
           Built by{" "}
           <Link
             href={siteConfig.links.github}
-            className="underline text-gray-700 font-semibold"
+            className="underline text-gray-700 font-semibold dark:text-gray-400"
           >
             Omor Hawlader
           </Link>
@@ -31,7 +31,7 @@ const Footer = () => {
           available on{" "}
           <Link
             href={siteConfig.links.github}
-            className="underline text-gray-700 font-semibold"
+            className="underline dark:text-gray-400 text-gray-700 font-semibold"
           >
             GitHub.
           </Link>

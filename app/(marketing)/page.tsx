@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-// import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 import Link from "next/link";
 import { Card } from "./components/card";
 import { cardConfig } from "@/config/marketing";
+import { siteConfig } from "@/config/site-map";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 export default function Home() {
   return (
@@ -23,14 +23,16 @@ export default function Home() {
             everything. <br /> Follow along as we figure this out together.
           </h2>
           <div className="space-x-6">
-            <Button className="py-6 px-8">Get Started Free</Button>
+            <Button className="py-6 px-8">
+              <LoginLink>Get Started Free</LoginLink>
+            </Button>
             <Button variant={"secondary"} className="py-6 px-8">
-              Github
+              <Link href={siteConfig.links.github}>Github</Link>
             </Button>
           </div>
         </div>
       </section>
-      <section className="w-screen flex flex-col text-center justify-center items-center gap-8 overflow-hidden h-screen bg-[#F8FAFC]">
+      <section className="w-screen flex flex-col text-center justify-center items-center gap-8 overflow-hidden h-screen bg-[#F8FAFC] dark:bg-inherit">
         <div>
           <h1 className="text-[4.2vw] font-bold">Features</h1>
           <h3 className="text-[1.3vw] text-gray-400 font-medium max-w-5xl">
@@ -51,7 +53,7 @@ export default function Home() {
           ))}
         </div>
 
-        <p className="text-[1.3vw] text-gray-400 font-medium max-w-5xl">
+        <p className="text-[1.3vw]  text-gray-400 font-medium max-w-5xl">
           Omar&#39;s blog also want to includes a blog and a full-featured
           documentation site with contributors
         </p>
