@@ -1,13 +1,12 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Loader2 } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
+import dynamic from "next/dynamic";
+const Editor = dynamic(() => import("@/components/editor"), { ssr: false });
 
-export default function EditorLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function App() {
   return (
-    <main className="p-8">
+    <>
       <div className="flex items-center justify-between">
         <div className="flex gap-5 items-center">
           <Button variant={"ghost"} className="pr-8 py-6">
@@ -27,8 +26,8 @@ export default function EditorLayout({
         >
           New Note
         </textarea>
-        {children}
+        <Editor />
       </div>
-    </main>
+    </>
   );
 }

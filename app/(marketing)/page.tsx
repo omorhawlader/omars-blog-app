@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-screen flex flex-col text-center justify-center items-center gap-8 overflow-hidden h-screen bg-[#F8FAFC] dark:bg-inherit">
-        <div>
+        <div id="features">
           <h1 className="text-[4.2vw] font-bold">Features</h1>
           <h3 className="text-[1.3vw] text-gray-400 font-medium max-w-5xl">
             This project is an experiment to see how a modern app, with features

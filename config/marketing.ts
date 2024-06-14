@@ -5,7 +5,7 @@ export const marketingConfig : marketingConfigType = {
 
         {
             title:"features",
-            href:"/features",
+            href:"#features",
             disabled:false
         },
 
@@ -58,7 +58,7 @@ export const cardConfig:CardConfigItem[] = [
     },
     {
         logo: "/Subscriptions.svg",
-        title:"Next.js 14",
+        title:"Stripe",
         description:"Free and paid subscriptions using Stripe."
     }
 ]

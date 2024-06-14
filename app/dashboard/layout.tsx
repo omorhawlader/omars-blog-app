@@ -20,7 +20,7 @@ export default async function DashboardLayout({
         <Sitebar />
         {children}
       </div>
-      {/* <Footer */}
+      <Footer />
     </main>
   ) : (
     <div>

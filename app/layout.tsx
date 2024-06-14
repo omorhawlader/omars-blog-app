@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { creatorName, siteConfig } from "@/config/site-map";
 import { ThemeProvider } from "@/components/themeprovider";
+import { EdgeStoreProvider } from "../lib/edgestore";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,7 +58,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <EdgeStoreProvider>{children}</EdgeStoreProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -23,7 +23,9 @@ const DashboardHeader = async () => {
     <header className="border p-6 flex items-center">
       <div className="flex gap-2 items-center mr-10">
         <CommandIcon />
-        <p className="font-semibold">{siteConfig.name}</p>
+        <Link href="/" className="font-semibold">
+          {siteConfig.name}
+        </Link>
       </div>
 
       <nav className="space-x-4 ">

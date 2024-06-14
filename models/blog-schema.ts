@@ -1,16 +1,16 @@
 import mongoose from 'mongoose';
-const { Schema } = mongoose;
-const blogSchema = new Schema({
-  title: { type: String, required: true,default:"Untitled" }, // Title is required
-  author: { type: String, required: true }, // Author is required
-  body: { type: String, required: false }, // Body is optional
-  comments: [{ body: { type: String, required: false }, date: { type: Date, default: Date.now } }], // Comments array is optional
-  date: { type: Date, default: Date.now }, // Date is required
-  hidden: { type: Boolean, default: false } // Hidden is required, default value is false
-},{
-  timestamps:true
+
+const postSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  content: { type: String,require:false },
+  published: { type: Boolean, default: false },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
+  authorEmail: { type: String, required: true },
+  html:{ type: String,require:false }
 });
 
-const Blog = mongoose.models.Blog || mongoose.model("Blog",blogSchema);
+
+const Blog = mongoose.models.Blog || mongoose.model("Blog",postSchema);
 
 export default Blog;
